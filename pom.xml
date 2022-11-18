@@ -19,7 +19,6 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <java.version>1.8</java.version>
     <guava.version>19.0</guava.version>
-    <lombok.version>1.18.12</lombok.version>
     <jackson.version>2.13.3</jackson.version>
     <jaxb-api.version>2.3.0</jaxb-api.version>
     <sonar.jacoco.listeners>5.7.0.15470</sonar.jacoco.listeners>
@@ -97,11 +96,7 @@
       <artifactId>micrometer-registry-prometheus</artifactId>
       <scope>runtime</scope>
     </dependency>
-    <dependency>
-      <groupId>org.projectlombok</groupId>
-      <artifactId>lombok</artifactId>
-      <optional>true</optional>
-    </dependency>
+
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-test</artifactId>
@@ -221,27 +216,6 @@
         <version>2.5.3</version>
         <configuration>
           <tagNameFormat>@{project.version}</tagNameFormat>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>io.fabric8</groupId>
-        <artifactId>docker-maven-plugin</artifactId>
-        <version>0.33.0</version>
-        <configuration>
-          <verbose>true</verbose>
-          <images>
-            <image>
-              <name>${docker.registry.host}/${docker.image.prefix}/${project.artifactId}</name>
-              <alias>${project.artifactId}</alias>
-              <build>
-                <contextDir>${project.basedir}</contextDir>
-                <tags>
-                  <tag>latest</tag>
-                  <tag>${project.version}</tag>
-                </tags>
-              </build>
-            </image>
-          </images>
         </configuration>
       </plugin>
       <plugin>
