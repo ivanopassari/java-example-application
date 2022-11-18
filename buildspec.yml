@@ -1,12 +1,5 @@
 version: 0.2
 
-env:
-  variables:
-    AWS_DEFAULT_REGION: "eu-west-1"
-    AWS_ACCOUNT_ID: "599682563291"
-    IMAGE_REPO_NAME: "java-test-app"
-    IMAGE_TAG: "latest"
-
 phases:
   install:
     runtime-versions:
@@ -33,30 +26,3 @@ artifacts:
   discard-paths: yes
   files:
     - target/*.jar
-#a service role with ECR per mission must be added to codebuild.
-#docker priviledge must be set in the codebuild configuration
-#        {
-#          "Action": [
-#            "ecr:BatchCheckLayerAvailability",
-#            "ecr:CompleteLayerUpload",
-#            "ecr:GetAuthorizationToken",
-#            "ecr:InitiateLayerUpload",
-#            "ecr:PutImage",
-#            "ecr:UploadLayerPart"
-#          ],
-#          "Resource": "*",
-#          "Effect": "Allow"
-#        }
-#To activate code artifact you need to add role permission to a bucket
-#  {
-#"Effect": "Allow",
-#"Resource": [
-#  "arn:aws:s3:::gladio-java-test-app",
-#  "arn:aws:s3:::gladio-java-test-app/*"
-#],
-#"Action": [
-#  "s3:PutObject",
-#  "s3:GetBucketAcl",
-#  "s3:GetBucketLocation"
-#]
-#},
