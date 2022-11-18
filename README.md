@@ -56,3 +56,8 @@ The class TestController expose some test endpoints.
 
 For example, you can get the instance id calling GET localhost:8080/test-app/v1/app/id
 
+## AWSCodeBuild
+You can build this project with AWSCodeBuild. 
+The configuration file under the root directory is buildspec.yml.
+This file build the maven project and upload a docker image to Elastic Container Registry.
+Remember to define AWS_DEFAULT_REGION,AWS_ACCOUNT_ID,AWS_DEFAULT_REGION,IMAGE_TAG of your Elastic Container Registry
