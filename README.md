@@ -10,7 +10,7 @@ Java 8 example application.
     * micrometer-registry-prometheus
 * [Graceful shutdown](https://docs.spring.io/spring-boot/docs/2.3.0.RELEASE/reference/htmlsingle/#boot-features-graceful-shutdown) 
 * [Liveness&Readiness probes](https://spring.io/blog/2020/03/25/liveness-and-readiness-probes-with-spring-boot) 
-* Actuator enabled endpoints:
+* Actuator endpoints enabled:
     * health
     * info
     * env
@@ -28,7 +28,7 @@ Java 8 example application.
 The `Dockerfile` specify how the image is created. This file create a layered image, click [here](https://spring.io/blog/2020/01/27/creating-docker-images-with-spring-boot-2-3-0-m1) for more info. 
 The base image is  `eclipse-temurin:8u342-b07-jre-focal`.
 
-The process is run from `bin/docker-entrypoint.sh`.
+Docker entrypoint `bin/docker-entrypoint.sh`.
 
 Docker build command `docker build -t <tag> .`
 
@@ -39,8 +39,8 @@ Spring Boot Actuator enabled on `src/main/resources/application.properties`:
 
 ## Connect to a Database
 You can connect a mysql database activating the spring profile `db`.
-The environment variabile activate this profile is `ACTIVE_PROFILES=db`.
-In the default behaiviour no database is conected.
+The environment variable activate this profile is `ACTIVE_PROFILES=db`.
+In the default behaviour no database is conected.
 You can also set other environment variabiles:
 
 DB_URL default value `localhost:3306`
