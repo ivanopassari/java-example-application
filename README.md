@@ -61,4 +61,4 @@ You can build this project with AWSCodeBuild.
 The configuration file under the root directory is buildspec.yml.
 This file builds the maven project and uploads a docker image to Elastic Container Registry.
 
-Remember to define your Elastic Container Registry parameters AWS_DEFAULT_REGION,AWS_ACCOUNT_ID,AWS_DEFAULT_REGION,IMAGE_TAG.
+Remember to define your Elastic Container Registry parameters `AWS_DEFAULT_REGION`,`AWS_ACCOUNT_ID`,`AWS_DEFAULT_REGION`,`IMAGE_TAG`.
