@@ -25,7 +25,7 @@ Java 8 example application.
 
 
 ## Docker Image Build
-The `Dockerfile` specify how the image is created. This file create a layered image, [here](https://spring.io/blog/2020/01/27/creating-docker-images-with-spring-boot-2-3-0-m1) for more info. 
+The `Dockerfile` specify how the image is created. This file create a layered image, click [here](https://spring.io/blog/2020/01/27/creating-docker-images-with-spring-boot-2-3-0-m1) for more info. 
 The base image is  `eclipse-temurin:8u342-b07-jre-focal`.
 
 The process is run from `bin/docker-entrypoint.sh`.
