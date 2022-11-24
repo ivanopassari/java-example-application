@@ -39,7 +39,7 @@ Spring Boot Actuator enabled on `src/main/resources/application.properties`:
 
 ## Connect to a Database
 You can connect a MySQL database by activating the spring profile `db`.
-The environment variable that activates this profile is `ACTIVE_PROFILES=db`.
+The environment variable is `ACTIVE_PROFILES=db`.
 In the default behaviour, no database is connected.
 You can also set other environment variables:
 
